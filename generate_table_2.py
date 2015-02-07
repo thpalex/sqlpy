@@ -22,7 +22,8 @@ def get_name(name):
 
 def generate_talbe_with_SQL():
     #use the sql language get from www.db-book.com
-    
+    db=MySQLdb.connect("localhost","root","","testdb")
+    coursor=db.cursor
 
 
     return
