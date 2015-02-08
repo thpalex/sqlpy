@@ -1,29 +1,25 @@
 # -*- coding: cp936 -*-
-#this module is to generate table
-import random
-import MySQLdb
+#this module use SQL to generate table which get from db-book.com
+#import MySQLdb
 
-def get_name(name):
-    #open file and get data
-    #input:name
-    #ouput:datalist
+def get_SQL(sql_name):
+    #open file and get sql
+    #input:sql_name
+    #ouput:sql order->str
 
-    
-    namelist=[]    
-    f=open(name,'r')
-    source=f.read()
-    for str in source.split(','):
-        namelist.append(str)
-
+    sql=""   
+    f=open(sql_name,'r')
+    sql=f.read()
     f.close()
     
-    return namelist
+    return sql
 
 
-def generate_talbe_with_SQL():
+"""def generate_talbe_with_SQL():
     #use the sql language get from www.db-book.com
     db=MySQLdb.connect("localhost","root","","testdb")
     coursor=db.cursor
 
 
     return
+"""
